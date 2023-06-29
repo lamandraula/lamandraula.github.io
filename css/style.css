@@ -1,6 +1,6 @@
 /* Template by freewebsitetemplates.com */
 
-@font-face {
+/* @font-face {
 	font-family: 'latoregular';
 	src: url('../fonts/lato-regular-webfont.eot');
 	src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -20,11 +20,11 @@
 	font-weight: normal;
 	font-style: normal;
 
-}
+} */
 
 
 
-body {font-family: 'latoregular';}
+/* body {font-family: 'latoregular';}
 #header h1 a span {font-family: 'nixie_oneregular';}
 #body div#tagline h1 {font-family: 'nixie_oneregular';}
 #body > h2 {font-family: 'nixie_oneregular';}
@@ -46,11 +46,13 @@ body {font-family: 'latoregular';}
 
 
 
+} */
+
+
+
+body {
+	font-family: sans-serif;
 }
-
-
-
-
 
 
 
@@ -71,11 +73,11 @@ p a:hover { color: green; } */
 
 
 body, body * { color: #ffffff; }
-
+/* 
 h1 { color: #fff; }
 h2 { color: #fff; }
 h3 { color: #fff;}
-h4 { color: #fff;}
+h4 { color: #fff;} */
 
 p a:hover { color: green; }
 
@@ -108,9 +110,10 @@ body {
 	}
 /* #header,#footer { background-color: rgba(255, 255, 255, .9); } */
 #header,#footer { background: url(../img/bg67.png) repeat; }
+#header ul#navigation {background-color: rgba(0, 0, 0, .2);}
 #header ul#navigation li ul li {background: #077054;}
 #body {background: url(../img/bg66.png) repeat;}
-#body div#tagline h1 { background: url(../img/bg-separator.png) no-repeat center bottom; }
+/* #body div#tagline h1 { background: url(../img/bg-separator.png) no-repeat center bottom; } */
 
 /* #body form label input {
 	background: #d1d3d4;
@@ -148,7 +151,8 @@ body {
 	background: url(../img/mobile/mobile-menu.png) no-repeat 0 0;}
 
 	#header ul#navigation {
-	background: url(../img/mobile/bg-mobile.png);
+	/* background: url(../img/mobile/bg-mobile.png); */
+	background-color: rgba(0, 0, 0, .5);
 	border: 1px solid #99fa99;}
 
 	#header ul#navigation li {
@@ -191,14 +195,18 @@ body {
 
 
 
-
+body, body * {box-sizing: border-box;}
 
 
 body {
-	font-size: 14px;
 	margin: 0;
 	padding: 0;
+	font-size: 1.5rem;
 }
+
+h1 {
+	font-size:4rem;
+	margin: 0 0 4rem 0;}
 
 a {
 	outline: none;
@@ -214,28 +222,28 @@ p {
 
 #header {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1200px;
+	text-align: center;
 }
-#header h1 {
-	font-size: 50px;
-	font-weight: normal;
-	line-height: 50px;
+/* #header h1 {
+
 	margin: 0;
 	padding: 30px 0;
 	text-align: center;
+} */
+#header > a {
+	display: inline-block;
+	width: 25rem;
+	margin: 2rem 0;
 }
-#header h1 a {
-	text-decoration: none;
+#header a img {
+	width: 100%;
 }
-#header h1 a span {
-	display: block;
-	font-size: 26px;
-	text-transform: uppercase;
-}
+
 #header ul#navigation {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: .5rem 0;
 	text-align: center;
 }
 #header ul#navigation li {
@@ -244,7 +252,6 @@ p {
 	position: relative;
 }
 #header ul#navigation li a {
-	font-size: 18px;
 	padding: 0 46px;
 	text-align: center;
 	text-decoration: none;
@@ -275,15 +282,12 @@ p {
 #body {
 	text-align: center;
 	margin: 0 auto;
-	max-width: 880px;
+	max-width: 1200px;
 	min-height: 827px;
 	overflow: hidden;
 	padding: 45px 40px 46px;
 }
 #body > h2 {
-	font-size: 35px;
-	font-weight: normal;
-	line-height: 30px;
 	margin: 0;
 	padding: 0 0 44px;
 }
@@ -294,39 +298,36 @@ p {
 	max-width: 50%;
 	width: auto;
 }
-#body div#tagline {
+/* #body div#tagline {
 	float: left;
 	margin: 110px 0 0 25px;
 	max-width: 510px;
 }
 #body div#tagline h1 {
-	font-size: 100px;
-	font-weight: normal;
-	line-height: 100px;
 	margin: 0;
 	padding: 0 0 55px;
 	text-align: center;
 	text-transform: uppercase;
 }
 #body div#tagline p {
-	font-size: 100px;
-	line-height: 100px;
 	padding: 43px 0 0;
 	text-align: center;
-}
+} */
 #body div.content {
 	overflow: hidden;
 }
 #body div.content > div {
-	float: left;
-	width: 510px;
+	float: right;
+	max-width: 50%;
+	padding: 0 3rem;
+	text-align: justify;
+}
+#body div.content > div > p:not(:last-child) {
+margin-bottom: 1rem;
 }
 #body div.content h3,
 #body form h3,
 #body ul.blog li h3 {
-	font-size: 23px;
-	font-weight: normal;
-	line-height: 30px;
 	margin: 0;
 	padding: 25px 0 0;
 }
@@ -335,7 +336,7 @@ p {
 	padding: 0;
 }
 #body div.content img.figure {
-	margin: 0 38px 46px 0;
+	float: left;
 }
 #body div.content div div.section {
 	padding: 55px 0 0;
@@ -365,8 +366,6 @@ p {
 	width: auto;
 }
 #body div.content div ul li h4 {
-	font-size: 18px;
-	font-weight: normal;
 	margin: 0;
 	padding: 12px 0 0;
 	text-align: center;
@@ -387,7 +386,6 @@ p {
 }
 #body form label input {
 	display: block;
-	font-size: 14px;
 	height: 46px;
 	line-height: 46px;
 	padding: 0 5px;
@@ -395,7 +393,6 @@ p {
 }
 #body form label textarea {
 	display: block;
-	font-size: 14px;
 	height: 250px;
 	line-height: 30px;
 	overflow: auto;
@@ -486,7 +483,7 @@ p {
 #footer {
 	box-sizing: border-box;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1200px;
 	overflow: hidden;
 	padding: 60px 30px;
 }
@@ -500,7 +497,6 @@ p {
 	line-height: 24px;
 }
 #footer div p {
-	font-size: 12px;
 	line-height: 30px;
 }
 #footer div#connect {
@@ -594,7 +590,6 @@ p {
 	}
 	#header ul#navigation {
 		display: none;
-		font-size: 1.5625em;
 		height: auto;
 		left: 0;
 		margin: 0 auto;
@@ -622,8 +617,6 @@ p {
 	}
 	#header ul#navigation li a {
 		display: block;
-		font-size: 0.8125em;
-		font-weight: normal;
 		height: 49px;
 		line-height: 49px;
 		padding: 0 15px;
@@ -686,7 +679,6 @@ p {
 		padding: 0 0 50px;
 	}
 	#body div#tagline p {
-		font-size: 5em;
 		line-height: 1.25em;
 		padding: 43px 10px;
 	}
@@ -775,7 +767,6 @@ p {
 		text-align: center;
 	}
 	#footer div p {
-		font-size: 1.125em;
 		line-height: 1.65em;
 		padding: 20px 0 0;
 		text-align: center;
@@ -789,19 +780,19 @@ p {
 @media screen
 and (max-width : 320px) {
 	#header h1 {
-		font-size: 2.8125em;
+
 	}
 	#header h1 a span {
-		font-size: 0.5em;
+
 		line-height: 1.25em;
 	}
 	#body div#tagline h1 {
-		font-size: 4.375em;
+
 	}
 	#body div#tagline p {
-		font-size: 3.125em;
+
 	}
 	#footer div p {
-		font-size: 1em;
+
 	}
 }
