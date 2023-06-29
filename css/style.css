@@ -725,14 +725,14 @@ margin-bottom: 1rem;
 	#body form label textarea {
 		border-radius: 0;
 		padding: 0 3%;
-		-webkit-appearance: none;
+		/* -webkit-appearance: none; */
 		width: 93%;
 	}
 	#body form input#send {
 		margin: 8px 2px 0 0;
 		padding: 0;
 		text-align: center;
-		-webkit-appearance: none;
+		/* -webkit-appearance: none; */
 	}
 	#body ul.blog {
 		padding: 0 20px;
@@ -777,7 +777,7 @@ margin-bottom: 1rem;
 		max-width: 185px;
 	}
 }
-@media screen
+/* @media screen
 and (max-width : 320px) {
 	#header h1 {
 
@@ -795,4 +795,4 @@ and (max-width : 320px) {
 	#footer div p {
 
 	}
-}
+} */
