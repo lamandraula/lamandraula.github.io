@@ -208,7 +208,9 @@ h1 {
 	font-size:4rem;
 	margin: 0 0 4rem 0;
 }
-
+h1::first-letter {
+	text-transform: uppercase;
+}
 a {
 	outline: none;
 }
@@ -686,6 +688,7 @@ margin-bottom: 1rem;
 
 	#body > h1 {
 		padding: 1rem;
+	
 	}
 	/* #body div#tagline {
 		float: none;
