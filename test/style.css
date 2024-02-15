@@ -25,9 +25,9 @@ b. -webkit- properties only
 
 
 
-
+body {font-size: 1.2rem;}
 body * {font-family: sans-serif;}
-
+header * {text-decoration: none;}
 
 
 
@@ -57,7 +57,6 @@ header {
 	position: fixed;
 	right: 1rem;
 	top: 1rem;
-	padding: 1rem;
 	text-align: right;
 	}
 section {
@@ -73,3 +72,33 @@ h2 {font-size: 3rem;}
 
 
 
+header.benvingut li:nth-child(1),
+header.qui-som li:nth-child(2),
+header.productes li:nth-child(3),
+header.contacta li:nth-child(4),
+header.visites li:nth-child(5) {font-size: 1.2em;}
+
+
+
+header.benvingut {
+	width: calc(100% - 2rem);
+	max-width: 30rem;
+	}
+header {
+	width: 15em;
+	max-width: 15em;
+	}
+header * {
+	display: block;
+	float: right;
+	width: 100%;
+	margin-bottom: .2em;
+	}
+header li:nth-child(1) {
+	margin-bottom: 1em;
+	}
+/* header.benvingut li:nth-child(1) {
+
+	} */
+header   {transition: all ease-in-out 1s;}
+header * {transition: all ease-out .2s;}
