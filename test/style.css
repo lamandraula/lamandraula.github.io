@@ -33,7 +33,7 @@ header * {text-decoration: none;}
 
 
 
-
+body {background-color: red;}
 /* header {background-color: rgb(66, 147, 58);} */
 section:nth-of-type(1) {background-color: #9c9644;}
 section:nth-of-type(2) {background-color: #5956ab;}
@@ -44,8 +44,63 @@ footer {background-color: #84623f;}
 
 body * {color:#fff;}
 
+header > span > a > span#line > span {
+	border-left: 2px solid white;
+	}
 
 
+
+
+
+/* header   {transition: all ease-in-out 1s;}
+header > span > a > span:nth-of-type(1) {transition: width ease-in 1s;}
+header * {transition: all ease-out .2s;} */
+
+header, header * {
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	}
+header,
+header > span > a > span:nth-of-type(1) > img,
+header > span > a > span#line,
+header > span > a > img,
+header li a {
+	transition-duration: .5s;
+	}
+header > span > a > span:nth-of-type(1) {
+	transition-property: width;
+	transition-duration: 1s;
+	}
+header.benvingut > span > a > span:nth-of-type(1) {
+	transition-delay: .6s;
+	}	
+header > span > a > span#line > span {
+	transition-duration: .3s;
+	transition-delay: 1s;
+	}
+header.benvingut > span > a > span#line > span {
+	transition-delay: .3s;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+	opacity: 0;
+	animation: appear 3s linear 1 .4s forwards;
+	}
+@keyframes appear {
+		0% { opacity: 0; }
+	100% { opacity: 1; }
+	}
 
 
 
@@ -78,90 +133,90 @@ section {z-index: 10;}
 header {
 	position: fixed;
 	right: 1rem;
-	top: 1rem;
+	top: 1rem;/*transition*/
 	text-align: right;
 	}
-
-
-
-
-
-
-/* header {
-	width: 15em;
-	max-width: 15em;
-	} */
-/* header > * {
-	float: right;
-	} */
 header > span {
 	display: block;
 	margin-bottom: 1rem;
-	/* width: 3rem; */
-
-}
+	}
 header > span > a {
 	display: block;
-	/* width: 3rem; */
-	/* height: 4.4rem; */
+	}
+header > span > a > * {
+	display: inline-block;
+	vertical-align: middle;
+	}
+header > span > a > span:nth-of-type(1) {
+	overflow: hidden;
+	width: 0rem;/*transition*/
+	}
+header > span > a > span:nth-of-type(1) > img {
+	width: 12rem;/*transition*/
+	padding-right: 1rem;
+	}
+header > span > a > span#line {
+	margin-right: .5rem;
+	height: 4rem;/*transition*/
+	}
+header > span > a > span#line > span {
+	display: inline-block;
+	height: 100%;
+	transform: scaley(0);/*transition*/
+	}
+header > span > a > img {
+	width: 3rem;/*transition*/
 	}
 
-header > span > a > * {
-	vertical-align: top;
-}
-header > span > a > span {
-	display: inline-block;
-	overflow: hidden;
-	width: 0rem;
-	margin-right: 1rem;
-}
-header > span > a > span > img {
-	/* background-color: blue; */
-	width: 13rem;
-}
-header > span > a > img {
-	display: inline-block;
-	/* background-color: #357154; */
-	width: 3rem;
-}
 
 
 
-/* header > ul > li {
-	display: block;
-	} */
+
 header > ul > li:not(:last-child) {
 	margin-bottom: .4em;
 	}
 
-/* header > ul > li:last-child {
-	width: 2rem;
-	right: 0;
-	float: right;
-	} */
 
 
-header   {transition: all ease-in-out 1s;}
-header > span > a > span {transition: all ease-in 1s;}
-header * {transition: all ease-out .2s;}
-
-/* header.benvingut {
-	width: calc(100% - 2rem);
-	max-width: 20rem;
-	} */
-header.benvingut > span > a > span {
-	width: 20.6rem;
+header.benvingut {
+	top: 1rem;/*fallback*/
+	top: calc(50% - 16rem);/*transition*/
 	}
-header.benvingut > span > a > span > img {
-	width: 20.6rem;
+header.benvingut > span > a > span:nth-of-type(1),
+header.benvingut > span > a > span:nth-of-type(1) > img {
+	width: 21rem;/*transition*/
+	}
+header.benvingut > span > a > span#line {
+	margin-right: 1rem;
+	height: 6.9rem;
+	}
+header.benvingut > span > a > span#line > span {
+	transform: scaley(1.2);/*transition*/
 	}
 header.benvingut > span > a > img {
-	width: 5rem;
+	width: 5rem;/*transition*/
 	}
-header.qui-som li:nth-child(1),
-header.productes li:nth-child(2),
-header.contacta li:nth-child(3),
-header.visites li:nth-child(4) {font-size: 1.4em;}
+header.qui-som li:nth-child(1) > a,
+header.productes li:nth-child(2) > a,
+header.contacta li:nth-child(3) > a,
+header.visites li:nth-child(4) > a {
+	font-size: 1.4em;/*transition*/
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -189,9 +244,9 @@ section {
 	display: block;
 
 	width: 100%;
-	/* height: 100%; */
-	min-height: 100%;
-	padding: 3rem;
+	height: 100%;
+	/* min-height: 100%; */
+	padding: 3rem 19rem 3rem 3rem;
 	overflow: hidden;
 	}
 h2 {font-size: 3rem;}
