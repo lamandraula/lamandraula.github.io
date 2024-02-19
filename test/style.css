@@ -259,4 +259,13 @@ section > img {
 
 
 
+
+
+section#visites {
+	background-image: url(../img/visites_bg.JPG);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	}
+
 iframe {width: 100%;}
