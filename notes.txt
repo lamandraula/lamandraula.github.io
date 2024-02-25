@@ -1,1 +1,42 @@
 cambiar javascript para no tener que poner la clase .fullHeightSection
+
+
+
+
+
+
+
+<!-- <script>
+// init controller
+var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: "100%"}});
+// build scenes
+new ScrollMagic.Scene({triggerElement: "#benvingut"})
+	.setClassToggle("#menu_benvingut", "active") // add class toggle
+	/*.addIndicators()*/ // add indicators (requires plugin)
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#qui_som"})
+	.setClassToggle("#menu_qui_som", "active") // add class toggle
+	/*.addIndicators()*/ // add indicators (requires plugin)
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#productes"})
+	.setClassToggle("#menu_productes", "active") // add class toggle
+	/*.addIndicators()*/ // add indicators (requires plugin)
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#contacta_amb_nosaltres"})
+	.setClassToggle("#menu_contacta_amb_nosaltres", "active") // add class toggle
+	/*.addIndicators()*/ // add indicators (requires plugin)
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#visites"})
+	.setClassToggle("#menu_visites", "active") // add class toggle
+	/*.addIndicators()*/ // add indicators (requires plugin)
+	.addTo(controller);
+</script> -->
+
+<!-- <script>
+new ScrollMagic.Scene({triggerElement: "#benvingut"})
+		.on("enter", function () {document.getElementById("menu_benvingut").classList.add("active");})
+		.on("leave", function () {document.getElementById("menu_benvingut").classList.remove("active");})
+		.addIndicators()
+		.addTo(controller);
+
+</script> -->
