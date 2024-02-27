@@ -38,6 +38,37 @@
 	min-width: 100%; min-height: 100%;
 	max-height: none; max-width: none;
 	}
+
+
+
+
+
+
+
+
+
+	
+
+#qui_som,
+#productes,
+#contacta_amb_nosaltres {
+	background: linear-gradient(-45deg, #bbaa8b, #ac692a, #e4d8cc, #8a6e36);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 </style>
 
 
@@ -76,18 +107,20 @@
 		<span id="line"><span></span></span>
 		<img src="./img/isotype.svg">
 	</a>
-	<ul>
-		<ul>
+	<div>
+		<menu>
 			<li><a href="#qui_som">Qui som</a></li>
 			<li><a href="#productes"><span>Els nostres</span> productes</a></li>
 			<li><a href="#visites">Visita'ns</a></li>
 			<li><a href="#contacta_amb_nosaltres"><span>Contacta</span> amb nosaltres</a></li>
 			<li><a href="https://www.instagram.com/boletslamandraula/" title="obrir instagram">Instagram</a></li>
-		</ul>
-		<ul>
-			<li><img src="./img/menu_line.svg"></li>
-		</ul>
-	</ul>
+		</menu>
+		<div>
+			<div>
+				<img src="./img/menu_line.svg">
+			</div>
+		</div>
+	</div>
 </header>
 
 
@@ -99,7 +132,7 @@
 
 <section id="benvingut" class="fullHeightSection">
 	<div class="bg" data-focus-x="0.01" data-focus-y="-0.09" data-image-w="1000" data-image-h="667">
-		<img src="./img/inici_bg.jpg">
+		<img src="./img/header_bg.jpg">
 	</div>
 	<!-- <div>
 		<ul><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li><li>asnvlnacsl</li></ul>
@@ -127,19 +160,19 @@
 
 
 <section id="productes" class="fullHeightSection">
-	<!-- <div class="bg">
-	</div> -->
+	<div class="bg">
+		<img src="./img/products_bg.jpg">
+	</div>
 	<div>
 		<h2>Els nostres productes</h2>
 		<div>
-			<div>
-				<img src="./img/varietat_pleurotus_ostreatus.png">
+			<div style="background-image:url(./img/shroom_oyster.png)">
 			</div>
-			<div>
-				<img src="./img/varietat_lentinula_edodes.png">
+			<div style="background-image:url(./img/shroom_shiitake.png)">
 			</div>
-			<div>
-				<img src="./img/varietat_hericium_erinaceus.png">
+			<div style="background-image:url(./img/shroom_lionsmane.png)">
+			</div>
+			<div style="background-image:url(./img/shroom_truffle.png)">
 			</div>
 		</div>
 	</div>
@@ -171,7 +204,7 @@
 
 <section id="visites" class="fullHeightSection">
 	<div class="bg" data-focus-x="-0.25" data-focus-y="-0.20" data-image-w="4032" data-image-h="3024">
-		<img src="./img/visites_bg.jpg">
+		<img src="./img/visit_bg.jpg">
 	</div>
 	<div>
 		<h2>Visita'ns</h2>
@@ -191,10 +224,10 @@
 	<div>
 		<h2>Contacta amb nosaltres</h2>
 		<p>Correu: <a href="mailto:lamandraula@gmail.com" title="enviar mail">lamandraula@gmail.com</a></p>
-		<p>Mòbil: <a href="tel:+34661875843" title="trucar">661 875 843</a></p>
+		<p>Mòbil: <a href="tel:+34661875843" title="trucar">661 87 58 43</a></p>
 		<p><a href="https://www.instagram.com/boletslamandraula/" title="obrir instagram">Instagram</a></p>
 		<p><a href="//www.google.com/maps/place/Bolets+la+Mandraula/@41.9949728,0.5441127,19.53z/data=!4m6!3m5!1s0x12a7ab39605feb4f:0x544da5196eafea4f!8m2!3d41.9951369!4d0.5444274!16s%2Fg%2F11stxd6rgk?entry=ttu">Enllaç a google</a></p>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.239427240857!2d0.5418524758297385!3d41.99513687122913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a7ab39605feb4f%3A0x544da5196eafea4f!2sBolets%20la%20Mandraula!5e0!3m2!1ses!2ses!4v1708005306865!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.239427240857!2d0.5418524758297385!3d41.99513687122913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a7ab39605feb4f%3A0x544da5196eafea4f!2sBolets%20la%20Mandraula!5e0!3m2!1ses!2ses!4v1708005306865!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 	</div>
 </section>
 
@@ -229,7 +262,7 @@
 
 
 <script type="text/javascript" src="./js/ScrollMagic.min.js"></script>
-<!-- <script type="text/javascript" src="./js/debug.addIndicators.js"></script> -->
+<!-- <script type="text/javascript" src="./- no/debug.addIndicators.js"></script> -->
 
 
 <script>
@@ -316,7 +349,7 @@ window.addEventListener('scroll', adjustHeight);
 
 
 
-<!-- <script src="./js/panelsnap.js" defer></script>
+<!-- <script src="./js/panelsnap.min.js" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 	var defaultOptions = {
@@ -334,28 +367,128 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
 <script>
-	var scroll = new SmoothScroll('a[href*="#"]');
+var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 
 
 
-<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/jquery.1.9.0.min.js"></script>
 <script type="text/javascript" src="./js/jquery.focuspoint.min.js"></script>
 
 <script type="text/javascript">
-//<![CDATA[	
-	
-	(function($) {
-		$(document).ready(function() {
-			
-			//Fire plugin
-			$('.bg').focusPoint();
-			
-		});
-	}(jQuery));
-
-//]]>
+(function($) {
+	$(document).ready(function() {
+		
+		//Fire plugin
+		$('.bg').focusPoint();
+		
+	});
+}(jQuery));
 </script>
+
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+		var productDivs = document.querySelectorAll('#productes > div:not(.bg) > div > div');
+		productDivs.forEach(function(div) {
+				div.addEventListener('click', function() {
+						var parentId = this.id;
+						this.parentElement.classList.add(parentId);
+				});
+		});
+});
+</script> -->
+<!-- <script>
+	document.addEventListener("DOMContentLoaded", function() {
+			var productDivs = document.querySelectorAll('#productes > div:not(.bg) > div > div');
+			productDivs.forEach(function(div, index) {
+					div.addEventListener('click', function() {
+							var parentId = "product" + (index + 1);
+							this.parentElement.classList.add(parentId);
+					});
+			});
+	});
+</script>
+
+
+
+
+<script>
+document.addEventListener('click', function(event) {
+	var productsDiv = document.querySelectorAll('*:not(#productes > div:not(.bg) > div > div)');
+	var clickedElement = event.target;
+
+	if (!isDescendant(productsDiv, clickedElement)) {
+		// Remove all classes from the specified elements
+		var elementsToRemoveClasses = document.querySelectorAll('div:not(.bg) > div');
+		elementsToRemoveClasses.forEach(function(element) {
+			element.removeAttribute('class'); // Remove all classes
+		});
+	}
+});
+
+function isDescendant(parent, child) {
+	var node = child.parentNode;
+	while (node != null) {
+		if (node === parent) {
+			return true;
+		}
+		node = node.parentNode;
+	}
+	return false;
+}
+</script> -->
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	var productDivs = document.querySelectorAll('#productes > div:not(.bg) > div > div');
+	productDivs.forEach(function(div, index) {
+			div.addEventListener('click', function() {
+					var parentId = "product" + (index + 1);
+					this.parentElement.classList.add(parentId);
+			});
+	});
+
+	document.addEventListener('click', function(event) {
+			var clickedElement = event.target;
+			var isProductDiv = clickedElement.closest('#productes > div:not(.bg) > div > div');
+			
+			if (!isProductDiv) {
+					// Remove classes only from the specified elements
+					var elementsToRemoveClasses = document.querySelectorAll('div:not(.bg) > div');
+					elementsToRemoveClasses.forEach(function(element) {
+							element.removeAttribute('class'); // Remove all classes
+					});
+			}
+	});
+});
+</script>
+
+<!-- <script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var productDivs = document.querySelectorAll('#productes > div:not(.bg) > div > div');
+		productDivs.forEach(function(div, index) {
+				div.addEventListener('click', function() {
+						var parentId = "product" + (index + 1);
+						this.classList.add("open");
+				});
+		});
+	
+		document.addEventListener('click', function(event) {
+				var clickedElement = event.target;
+				var isProductDiv = clickedElement.closest('#productes > div:not(.bg) > div > div');
+				
+				if (!isProductDiv) {
+						// Remove classes only from the specified elements
+						var elementsToRemoveClasses = document.querySelectorAll('#productes > div:not(.bg) > div > div');
+						elementsToRemoveClasses.forEach(function(element) {
+								element.removeAttribute('class'); // Remove all classes
+						});
+				}
+		});
+	});
+</script> -->
 
 
 </body>

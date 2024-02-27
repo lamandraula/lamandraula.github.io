@@ -24,6 +24,28 @@ b. -webkit- properties only
 
 
 
+
+header,
+#productes > div:not(.bg) > div > div > img {
+	pointer-events: none;
+	}
+header > a > span:nth-child(1),
+header.benvingut > a > span:nth-child(2),
+header > a > img,
+header > div a {
+	pointer-events: all;
+	}
+
+#productes > div:not(.bg) > div > div {
+	cursor: pointer;
+}
+
+
+
+
+
+
+
 body {font-size: 1.2rem;}
 body * {font-family: sans-serif;}
 header * {text-decoration: none;}
@@ -31,6 +53,10 @@ header * {text-decoration: none;}
 
 
 /* header { backdrop-filter: blur(10px) brightness(.9) } */
+#productes > div:not(.bg) > div > div { backdrop-filter: blur(10px) }
+
+
+
 
 body { background-color: #bba68a }
 /* header {background-color: rgb(66, 147, 58);} */
@@ -38,7 +64,7 @@ section:nth-of-type(1) { background-color: #654f33 }
 /* section:nth-of-type(2) { background-color: #bba68a } */
 section:nth-of-type(3) { background-color: #654f33 }
 /* section:nth-of-type(4) { background-color: #bba68a } */
-section:nth-of-type(5) { background-color: #654f33 }
+/* section:nth-of-type(5) { background-color: #654f33 } */
 footer {background-color: #84623f;}
 
 #productes > div:not(.bg) > div > div { background-color: rgba(0, 0, 0, .3) }
@@ -52,6 +78,9 @@ body * {color:#fff;}
 
 
 
+
+
+
 header > a > span:nth-of-type(2) > span { border-left: 2px solid white }
 /* header {
 	border-radius: 1rem;
@@ -60,8 +89,8 @@ header > a > span:nth-of-type(2) > span { border-left: 2px solid white }
 
 #productes > div:not(.bg) > div > div { border-radius: 1rem }
 
-header { text-shadow: 0 0 5px #000, 0 0 5px #000 }
-header:not(.benvingut) > a > img { filter: drop-shadow(0 0 5px #000) }
+/* header { text-shadow: 0 0 5px #000, 0 0 5px #000 }
+header:not(.benvingut) > a > img { filter: drop-shadow(0 0 5px #000) } */
 
 
 
@@ -87,13 +116,13 @@ header * {transition: all ease-out .2s;} */
 header,
 header > a,
 header > a *,
-header > ul *:not(span) {
+header > div *:not(span) {
 	transition-property: all;
 	transition-timing-function: ease-in-out;
 	transition-duration: .5s;
 	}
 header {
-	transition-property: top;
+	transition-property: top right;
 	}
 header:not(.benvingut) > a {
 	transition-delay: 1s;
@@ -112,9 +141,20 @@ header > a > span:nth-of-type(2) > span {
 header.benvingut > a > span:nth-of-type(2) > span {
 	transition-delay: .3s;
 	}
-header > ul *:not(span) {
+/* header > div *:not(span) {
+	transition-duration: .2s;
+	} */
+header > div > menu > *:not(span),
+header > div > div > div {
 	transition-duration: .2s;
 	}
+header:not(.benvingut) > div > div {
+	transition-property: width margin-left;
+	transition-delay: 1.5s;
+	}
+
+
+
 
 
 
@@ -151,11 +191,6 @@ section           { z-index: 10 }
 
 
 
-header { pointer-events: none }
-header > a > span:nth-child(1),
-header.benvingut > a > span:nth-child(2),
-header > a > img,
-header > ul a { pointer-events: all }
 
 
 
@@ -171,11 +206,18 @@ header {
 	flex-direction: column;
 	justify-content: flex-end;
 	}
+header.benvingut {
+	top: 2rem;
+	right: 2rem;
+	}
 header > a {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	margin-bottom: .8rem;
+	}
+header.benvingut > a {
+	margin-bottom: 3rem;
 	}
 header > a > span:nth-of-type(1) {
 	width: 0rem;
@@ -186,90 +228,76 @@ header > a > span:nth-of-type(1) > img {
 	width: 13rem;
 	padding-right: 1rem;
 	}
+header.benvingut > a > span:nth-of-type(1),
+header.benvingut > a > span:nth-of-type(1) > img {
+	width: 22rem;
+	}
 header > a > span:nth-of-type(2) {
 	padding-right: .5rem;
 	height: 4.5rem;
+	}
+header.benvingut > a > span:nth-of-type(2) {
+	padding-right: 1rem;
+	height: 7.4rem;
 	}
 header > a > span:nth-of-type(2) > span {
 	display: inline-block;
 	height: 100%;
 	transform: scaley(0);
 	}
-header > a > img {
-	width: 3rem;
-	}
-header > ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	}
-header > ul > ul:nth-child(1) {
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-	}
-header > ul > ul:nth-child(1) > li:not(:last-child) {
-	margin-bottom: .6em;
-	}
-header > ul > ul:nth-child(1) > li > a > span {
-	display: block;
-	}
-header > ul > ul:nth-child(2) {
-	/* background-color: #8b4568; */
-	width: .5rem;
-	margin-left: .3rem;
-	overflow: hidden;
-	}
-
-
-
-
-
-
-
-
-
-
-header.benvingut {
-	top: 1rem;/*fallback*/
-	top: calc(50% - 17.7rem);
-	}
-header.benvingut > a {
-	margin-bottom: 2rem;
-	}
-header.benvingut > a > span:nth-of-type(1),
-header.benvingut > a > span:nth-of-type(1) > img {
-	width: 22rem;
-	}
-header.benvingut > a > span:nth-of-type(2) {
-	padding-right: 1rem;
-	height: 7.2rem;
-	}
 header.benvingut > a > span:nth-of-type(2) > span {
 	transform: scaley(1.2);
+	}
+header > a > img {
+	width: 3rem;
 	}
 header.benvingut > a > img {
 	width: 5rem;
 	}
-header.qui-som li:nth-child(1) > a,
-header.productes li:nth-child(2) > a,
-header.visites li:nth-child(3) > a,
-header.contacta li:nth-child(4) > a {
+
+header > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	}
+header > div > menu {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	}
+header > div > menu > li:not(:last-child) {
+	margin-bottom: .6em;
+	}
+  header.qui-som > div > menu > li:nth-child(1) > a,
+header.productes > div > menu > li:nth-child(2) > a,
+  header.visites > div > menu > li:nth-child(3) > a,
+ header.contacta > div > menu > li:nth-child(4) > a {
 	font-size: 1.4em;
 	}
+header > div > menu > li > a > span {
+	display: block;
+	}
+header > div > div {
+	width: .5rem;
+	margin-left: .3rem;
+	overflow: hidden;
+	}
+header.benvingut > div > div {
+	width: 0;
+	margin-left: 0rem;
+	}
 
+header.benvingut > div > div { height: 11rem }
+  header.qui-som > div > div,
+  header.visites > div > div { height: 11.9rem }
+header.productes > div > div,
+ header.contacta > div > div { height: 12.3rem }
 
-	        header > ul > ul:nth-child(2) { height: 12rem }
-  header.qui-som > ul > ul:nth-child(2),
-  header.visites > ul > ul:nth-child(2) { height: 11.9rem }
-header.productes > ul > ul:nth-child(2),
- header.contacta > ul > ul:nth-child(2) { height: 12.3rem }
-
-          header > ul > ul:nth-child(2) > li { margin-top: -12rem }
-  header.qui-som > ul > ul:nth-child(2) > li { margin-top: -10.3rem }
-header.productes > ul > ul:nth-child(2) > li { margin-top: -7.6rem }
-  header.visites > ul > ul:nth-child(2) > li { margin-top: -5.3rem }
- header.contacta > ul > ul:nth-child(2) > li { margin-top: -2.5rem }
+header.benvingut > div > div > div { margin-top: -30rem }
+  header.qui-som > div > div > div { margin-top: -10.3rem }
+header.productes > div > div > div { margin-top: -7.6rem }
+  header.visites > div > div > div { margin-top: -5.3rem }
+ header.contacta > div > div > div { margin-top: -2.5rem }
 
 
 
@@ -331,21 +359,65 @@ section p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #productes > div:not(.bg) > div {
 	width: 100%;
 	height: calc(100% - 6rem);
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: space-between;
+	/* justify-content: space-between; */
+	align-content: flex-start;
+	overflow: hidden;
 	}
 #productes > div:not(.bg) > div > div {
-	padding: 1rem;
-	width: 15rem;
-	height: 15rem;
+	width: 14rem;
+	height: 14rem;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: 12rem;
+	background-position: 1rem center;
 	}
-#productes > div:not(.bg) > div > div > img {
+#productes .product1 > :nth-child(1),
+#productes .product2 > :nth-child(2),
+#productes .product3 > :nth-child(3),
+#productes .product4 > :nth-child(4),
+#productes .product5 > :nth-child(5) {
 	width: 100%;
+	height: 100%;
+	margin: 0;
+
+	background-size: 25rem;
+	background-position: -3rem calc(100% + 3rem);
+	}
+#productes .product1 > :not(:nth-child(1)),
+#productes .product2 > :not(:nth-child(2)),
+#productes .product3 > :not(:nth-child(3)),
+#productes .product4 > :not(:nth-child(4)),
+#productes .product5 > :not(:nth-child(5)) {
+	margin: 0;
+	width: 0;
+	height: 0;
+
+	background-size: 0;
 	}
 
 
@@ -354,6 +426,29 @@ section p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#productes * {
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: .5s;
+	/* transition-duration: 2s; */
+	}
 
 
 
