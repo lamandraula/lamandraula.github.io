@@ -19,7 +19,7 @@
 */
 .owl-carousel {
 	display: none;
-	width: 20rem;
+	width: 20%;
 	-webkit-tap-highlight-color: transparent;
 	/* position relative and z-index fix webkit rendering fonts issue */
 	position: relative;
@@ -303,13 +303,13 @@
 
 
 <div class="owl-carousel owl-theme">
-	<!-- <img class="owl-lazy" data-src="https://placehold.it/350x250&text=1" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
-	<img class="owl-lazy" data-src="https://placehold.it/350x350&text=2" data-src-retina="https://placehold.it/350x250&text=2-retina" alt=""> -->
-	<!-- <picture>
+	<img class="owl-lazy" data-src="https://placehold.it/350x250&text=1" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+	<img class="owl-lazy" data-src="https://placehold.it/350x350&text=2" data-src-retina="https://placehold.it/350x250&text=2-retina" alt="">
+	<picture>
 		<source class="owl-lazy" media="(min-width: 650px)" data-srcset="https://placehold.it/350x250&text=3-large">
 		<source class="owl-lazy" media="(min-width: 350px)" data-srcset="https://placehold.it/350x250&text=3-medium">
 		<img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="">
-	</picture> -->
+	</picture>
 	<img class="owl-lazy" data-src="./img/shroom_oyster_1.jpg" alt="">
 	<img class="owl-lazy" data-src="./img/shroom_oyster_2.jpg" alt="">
 	<img class="owl-lazy" data-src="./img/shroom_oyster_3.jpg" alt="">
@@ -346,10 +346,13 @@ jQuery(document).ready(function($) {
 	$('.owl-carousel').owlCarousel({
 		items: 1,
 		lazyLoad: true,
-		lazyLoadEager: 1,
+		lazyLoadEager: 0,
 		loop: true,
+		autoplay: true,
+		autoplayHoverPause: true,
 		margin: 10,
-		autoHeight: true
+		autoHeight: true,
+		nav: true
 	});
 });
 </script>
