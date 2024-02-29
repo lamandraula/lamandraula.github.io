@@ -15,10 +15,79 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="./css/owl-carousel.css" type="text/css" media="screen" />
 <!-- <link rel="stylesheet" href="./- no/pesticide.min.css" /> -->
 
 <!-- <link rel="stylesheet" href="./fonts/fontloader.css" type="text/css"/> -->
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+
+<style>
+/*
+* Owl Carousel v2.3.4
+* Copyright 2013-2018 David Deutsch
+* Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+*/
+
+/* Default theme - Owl Carousel CSS File */
+.owl-theme .owl-nav {
+	margin-top: 10px;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+	}
+.owl-theme .owl-nav [class*='owl-'] {
+	color: #FFF;
+	font-size: 14px;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #D6D6D6;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 3px;
+	}
+.owl-theme .owl-nav [class*='owl-']:hover {
+	background: #869791;
+	color: #FFF;
+	text-decoration: none;
+	}
+.owl-theme .owl-nav .disabled {
+	opacity: 0.5;
+	cursor: default;
+	}
+.owl-theme .owl-nav.disabled + .owl-dots {
+	margin-top: 10px;
+	}
+.owl-theme .owl-dots {
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+	}
+.owl-theme .owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	display: inline;
+	}
+.owl-theme .owl-dots .owl-dot span {
+	width: 10px;
+	height: 10px;
+	margin: 5px 7px;
+	background: #D6D6D6;
+	display: block;
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+	transition: opacity 200ms ease;
+	border-radius: 30px;
+	}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background: #869791;
+	}
+</style>
+
+
+
+
+
+
+
 
 
 <style>
@@ -50,12 +119,11 @@
 	
 
 #qui_som,
-#productes,
 #contacta_amb_nosaltres {
 	background: linear-gradient(-45deg, #bbaa8b, #ac692a, #e4d8cc, #8a6e36);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 @keyframes gradient {
@@ -160,42 +228,80 @@
 
 
 <section id="productes" class="fullHeightSection">
-	<div class="bg">
+	<!-- <div class="bg">
 		<img src="./img/products_bg.jpg">
-	</div>
+	</div> -->
 	<div>
 		<h2>Els nostres productes</h2>
 		<div>
 			<div style="background-image:url(./img/shroom_oyster.png)">
+				<div>
+					<div class="owl-carousel owl-theme">
+						<img class="owl-lazy" data-src="./img/shroom_oyster_1.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_oyster_2.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_oyster_3.jpg" alt="">
+					</div>
+				</div>
+				<div>
+					<h3>Gírgola <i>(Pleurotus ostreatus)</i></h3>
+					<p>Aquesta espècie també s'anomena “Orellana”, “Petxina”, “Xampinyó ostra”, “Bolet d'orella” o “Belarri landu”. En anglès se'n diu “Oyster mushroom” i en francès “leurote en huître”.</p>
+					<p>És una de les espècies més cultivades i consumides en el món culinari. De carn espessa i blanca, desprèn una olor forta, intensa, i de sabor molt agradable. Bolet perfecte per fer-lo saltat.</p>
+					<p>La Gírgola creix en forma de ram, és a dir d'un peu molt curt hi surten vàries ramificacions que conformen finalment barrets independents en forma de pètal. El barret és de tonalitats grises i les làmines ben definides, són blanques i compactes. La grandària pot variar des dels 4 cm fins als 25 cm.</p>
+					<p>Els bolets del gènere <i>Pleurotus</i> són apreciades des de fa segles pel seu valor nutritiu i el seu deliciós sabor.</p>
+				</div>
 			</div>
 			<div style="background-image:url(./img/shroom_shiitake.png)">
+				<div>
+					<div class="owl-carousel owl-theme">
+						<img class="owl-lazy" data-src="./img/shroom_shiitake_1.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_shiitake_2.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_shiitake_3.jpg" alt="">
+					</div>
+				</div>
+				<div>
+					<h3>Xiitake <i>(Lentinula edodes)</i></h3>
+					<p>El seu nom comú deriva de la paraula japonesa ‘Shii’ que indica una varietat d'arbre molt pròxim al castanyer (<i>Castanopsis cuspidata</i>), i de la paraula ‘take’ que significa ‘fong’.</p>
+					<p>Aquest fong del bosc és conegut com un dels bolets comestibles més consumit del món.  El seu ús gastronòmic és molt extens i el seu contingut en substàncies bioactives fan que també sigui de gran interès.</p>
+					<p>El Xiitake, és un excel·lent i deliciós comestible, molt benvolgut a la Xina i el Japó. A més, les seves qualitats es valoren des de temps immemorials en les cultures orientals. Des d'un punt de vista nutricional, té provitamina D, àcids grassos insaturats i gran quantitat de polisacàrids, especialment el lentinan o lentinano.</p>
+					<p>Aquest bolet té barrets de 5 a 25 cm de diàmetre de vores irregulars. Sobretot, les seves làmines són blanques amb tons vermellosos que també s'enfosqueixen amb l'edat. El peu és fibrós i centrat.</p>
+					<p>Bolet amb un sabor intens a fusta, terra i lleugers tocs fumats, és carnós i umami.</p>
+					<p>Ideal per utilitzar en brous, sopes, saltats o guisats. </p>
+				</div>
 			</div>
 			<div style="background-image:url(./img/shroom_lionsmane.png)">
+				<div>
+					<div class="owl-carousel owl-theme">
+						<img class="owl-lazy" data-src="./img/shroom_lionsmane_1.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_lionsmane_2.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_lionsmane_3.jpg" alt="">
+					</div>
+				</div>
+				<div>
+					<h3>Bolet Carner <i>(Hericium erinaceus)</i></h3>
+					<p>Bolet també anomenat Melena de León ,’Yamabushitake’, ‘Hou Tou Gu’ (bolet de cap de mico) o “Hongo erizo”. Cal destacar el seu atractiu visual pel seu imponent cos fructífer globular amb unes espines blanques penjants que fan l'efecte d'una cascada congelada o d'una majestuosa cabellera de lleó (d'aquí el seu curiós nom popular).</p>
+					<p>El bolet carner, conté centenars de components bioactius o biomolècules actives, que s'estudien pel seu paper en la microbiota intestinal. Actualment, gaudeix d'una creixent popularitat i és objecte de contínua recerca científica en diverses àrees.</p>
+					<p>De color blanc o groc-marró pàl·lid que s'enfosqueix amb l'edat, tot el cos fructífer pot tenir fins a 30 cm de diàmetre, encara que el més típic és de 15 a 20 cm. Les espines de l’<i>Hericium erinaceus</i> tenen puntes punxegudes i varien d'1 a 5 cm de llarg.</p>
+					<p>A més de ser molt apreciat en la cuina per la seva carn blanca d’olor afruitada, se li atribueixen propietats medicinals, sent molt utilitzada en la medicina tradicional xinesa.</p>				</div>
 			</div>
 			<div style="background-image:url(./img/shroom_truffle.png)">
+				<div>
+					<div class="owl-carousel owl-theme">
+						<img class="owl-lazy" data-src="./img/shroom_truffle_1.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_truffle_2.jpg" alt="">
+						<img class="owl-lazy" data-src="./img/shroom_truffle_3.jpg" alt="">
+					</div>
+				</div>
+				<div>
+					<h3>trufa</h3>
+					<p>trufa</p>
+					<p>trufa</p>
+					<p>trufa</p>
+					<p>trufa</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- <div>
-		<h3>Gírgola <i>(Pleurotus ostreatus)</i></h3>
-		<p>Aquesta espècie també s’anomena “Orellana”, “Petxina”, “Xampinyó ostra”, “Bolet d´orella”, “Belarri landu”,...  En anglès se'n diu “Oyster mushroom” i en francès “leurote en huître”.</p>
-		<p>És una de les espècies més cultivades i consumides en el món culinàri. De carn espessa i blanca, desprèn una olor forta, intensa, i de sabor molt agradable. Bolet perfecte per fer-lo saltejat.</p>
-		<p>La Gírgola creix en forma de ram, es a dir d’un peu molt curt hi surten varies ramificacions que conformen finalment barrets independents en forma de pètal. El barret és de tonalitats grises i les làmines ben definides, son blanques i compactes. La grandària pot variar des dels 4 cm fins als 25cm.</p>
-		<p>Els bolets del gènere <i>Pleurotus</i> són apreciades des de fa segles pel seu valor nutritiu i el seu deliciós sabor.</p>
-		<h3>Xiitake <i>(Lentinula edodes)</i></h3>
-		<p>El seu nom comú deriva de la paraula japonesa ‘Shii’ que indica una varietat de d’arbre molt pròxim al castanyer <i>(Castanopsis cuspidata)</i>, i de la paraula ‘take’ que significa ‘fong’.</p>
-		<p>Aquest fong del bosc és conegut com un dels bolets comestibles més consumit del món.  El seu ús gastronòmic és molt extens i  el seu contingut en substàncies bioactives fan que també sigui de gran interès.</p>
-		<p>El Xiitake, és un excel·lent i deliciós comestible, molt benvolgut a la Xina i el Japó. A més, les seves qualitats es valoren des de temps immemorials en les cultures orientals. Des d'un punt de vista nutricional, té provitamina D, àcids grassos insaturats i gran quantitat de polisacàrids, especialment el lentinan o lentinano.</p>
-		<p>Aquest bolet té barrets de 5 a 25 cm de diàmetre de vores irregulars. Sobretot, les seves làmines són blanques amb tons vermellosos que també s'enfosqueixen amb l'edat. El peu és fibrós i centrat.</p>
-		<p>Bolet amb un sabor intens a fusta, terra i lleugers tocs fumats, és carnós i umami.</p>
-		<p>Ideal per utilitzar en brous, sopes, saltats o guisats. </p>
-		<h3>Bolet Carner <i>(Hericium erinaceus)</i></h3>
-		<p>Bolet també anomenat  Melena de León ,’Yamabushitake’, ‘Hou Tou Gu’ (bolet de cap de mico) o “hongo erizo”. Cal destacar el seu atractiu visual pel seu imponent cos fructífer globular amb unes espines blanques penjants que fan l'efecte d'una cascada congelada o d'una majestuosa cabellera de lleó (d'aquí el seu curiós nom popular).</p>
-		<p>El bolet carner, conté centenars de components bioactius o biomolècules actives, que s'estudien pel seu paper en la microbiota intestinal. Actualment gaudeix d'una creixent popularitat i és objecte de contínua recerca científica en diverses àrees.</p>
-		<p>De color blanc o groc-marró pàl·lid que s'enfosqueix amb l'edat, tot el cos fructífer pot tenir fins a 30 cm de diàmetre, encara que el més típic és de 15 a 20 cm. Les espines de l’<i>Hericium erinaceus</i> tenen puntes punxegudes i varien d'1 a 5 cm de llarg.</p>
-		<p>A més de ser molt apreciat en la cuina per la seva carn blanca d’olor afruitada, se li atribueixen propietats medicinals, sent molt utilitzada en la medicina tradicional xinesa.</p>
 		<a href="./files/Bolets la Mandraula - Receptes.pdf" title="Llibre de receptes">obre el llibre de receptes</a>
-	</div> -->
+	</div>
 </section>
 
 
@@ -371,8 +477,8 @@ var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 
 
-
-<script type="text/javascript" src="./js/jquery.1.9.0.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="./js/jquery.1.9.0.min.js"></script> -->
 <script type="text/javascript" src="./js/jquery.focuspoint.min.js"></script>
 
 <script type="text/javascript">
@@ -456,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			
 			if (!isProductDiv) {
 					// Remove classes only from the specified elements
-					var elementsToRemoveClasses = document.querySelectorAll('div:not(.bg) > div');
+					var elementsToRemoveClasses = document.querySelectorAll('#productes > div:not(.bg) > div');
 					elementsToRemoveClasses.forEach(function(element) {
 							element.removeAttribute('class'); // Remove all classes
 					});
@@ -489,6 +595,26 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 </script> -->
+
+
+<script src="./js/owl.carousel.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$('.owl-carousel').owlCarousel({
+		items: 1,
+		lazyLoad: true,
+		lazyLoadEager: 0,
+		loop: true,
+		// autoplay: true,
+		// autoplayHoverPause: true,
+		margin: 10,
+		// autoWidth: true,
+		autoHeight: true,
+		nav: true
+	});
+});
+</script>
+
 
 
 </body>

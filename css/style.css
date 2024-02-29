@@ -39,7 +39,13 @@ header > div a {
 #productes > div:not(.bg) > div > div {
 	cursor: pointer;
 }
-
+#productes .product1 > :nth-child(1),
+#productes .product2 > :nth-child(2),
+#productes .product3 > :nth-child(3),
+#productes .product4 > :nth-child(4),
+#productes .product5 > :nth-child(5) {
+	cursor: initial;
+}
 
 
 
@@ -48,6 +54,8 @@ header > div a {
 
 body {font-size: 1.2rem;}
 body * {font-family: sans-serif;}
+h2, h3 { font-weight: bold;}
+i { font-style: italic;}
 header * {text-decoration: none;}
 
 
@@ -61,7 +69,7 @@ header * {text-decoration: none;}
 body { background-color: #bba68a }
 /* header {background-color: rgb(66, 147, 58);} */
 section:nth-of-type(1) { background-color: #654f33 }
-/* section:nth-of-type(2) { background-color: #bba68a } */
+section:nth-of-type(2) { background-color: #bba68a }
 section:nth-of-type(3) { background-color: #654f33 }
 /* section:nth-of-type(4) { background-color: #bba68a } */
 /* section:nth-of-type(5) { background-color: #654f33 } */
@@ -153,7 +161,13 @@ header:not(.benvingut) > div > div {
 	transition-delay: 1.5s;
 	}
 
-
+#productes .product1 > :nth-child(1) > div,
+#productes .product2 > :nth-child(2) > div,
+#productes .product3 > :nth-child(3) > div,
+#productes .product4 > :nth-child(4) > div,
+#productes .product5 > :nth-child(5) > div {
+	transition-delay: .5s;
+	}
 
 
 
@@ -390,11 +404,18 @@ section p {
 	height: 14rem;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
+	
 	overflow: hidden;
+
+	display: flex;
+	flex-direction: row;
 
 	background-repeat: no-repeat;
 	background-size: 12rem;
-	background-position: 1rem center;
+	background-position: calc(100% - 1rem) center;
+	}
+#productes > div:not(.bg) > div > div > div {
+	opacity: 0;
 	}
 #productes .product1 > :nth-child(1),
 #productes .product2 > :nth-child(2),
@@ -404,9 +425,10 @@ section p {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	padding: 3rem;
 
 	background-size: 25rem;
-	background-position: -3rem calc(100% + 3rem);
+	background-position: calc(100% + 3rem) calc(100% + 3rem);
 	}
 #productes .product1 > :not(:nth-child(1)),
 #productes .product2 > :not(:nth-child(2)),
@@ -420,11 +442,34 @@ section p {
 	background-size: 0;
 	}
 
+/* #productes > div:not(.bg) > div > div > div {
+	width: 50%;
+	} */
 
+#productes .product1 > :nth-child(1) > div,
+#productes .product2 > :nth-child(2) > div,
+#productes .product3 > :nth-child(3) > div,
+#productes .product4 > :nth-child(4) > div,
+#productes .product5 > :nth-child(5) > div {
+	opacity: 1;
+	}
+#productes > div:not(.bg) > div > div > div:nth-child(1){
+	/* background-color: rgb(161, 86, 86); */
+	width: 20rem;
+	}
+#productes > div:not(.bg) > div > div > div:nth-child(2){
+	/* background-color: rgb(95, 185, 97); */
+	width: calc(100% - 20rem);
+	padding: 0 2rem;
+	overflow-y: auto;
+	}
 
-
-
-
+#productes h3 {
+	margin-bottom: 1em;
+	}
+#productes h3 i {
+	display: block;
+	}
 
 
 
