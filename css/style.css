@@ -14,43 +14,6 @@ b. -webkit- properties only
 	-webkit-tap-highlight-color: transparent;
 	} */
 
-::-webkit-scrollbar             { width: .6rem; height: .6rem;}
-::-webkit-scrollbar-track-piece { background-color: #333;}
-::-webkit-scrollbar-thumb {
-	background-color: #888;
-	border-radius: 1rem;
-	}
-
-
-
-
-
-header,
-#productes > div:not(.bg) > div > div > img {
-	pointer-events: none;
-	}
-header > a > span:nth-child(1),
-header.benvingut > a > span:nth-child(2),
-header > a > img,
-header > div a {
-	pointer-events: all;
-	}
-
-#productes > div:not(.bg) > div > div {
-	cursor: pointer;
-}
-#productes .product1 > :nth-child(1),
-#productes .product2 > :nth-child(2),
-#productes .product3 > :nth-child(3),
-#productes .product4 > :nth-child(4),
-#productes .product5 > :nth-child(5) {
-	cursor: initial;
-}
-
-
-
-
-
 
 body {font-size: 1.2rem;}
 body * {font-family: sans-serif;}
@@ -75,7 +38,7 @@ section:nth-of-type(3) { background-color: #654f33 }
 /* section:nth-of-type(5) { background-color: #654f33 } */
 footer {background-color: #84623f;}
 
-#productes > div:not(.bg) > div > div { background-color: rgba(0, 0, 0, .3) }
+
 
 
 
@@ -117,14 +80,234 @@ header:not(.benvingut) > a > img { filter: drop-shadow(0 0 5px #000) } */
 
 
 
-/* header   {transition: all ease-in-out 1s;}
-header > a > span:nth-of-type(1) {transition: width ease-in 1s;}
-header * {transition: all ease-out .2s;} */
+
+header            { z-index: 40 }
+section :not(.bg) { z-index: 30 }
+section .bg       { z-index: 20 }
+section           { z-index: 10 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body * { box-sizing: border-box }
+html,body { width: 100%; height: 100% }
+
+
+
+
+
+
+
+
+
+
+header {
+	display: none;
+	}
+
+
+
+section {
+	display: block;
+	min-width: 100%;
+	min-height: 100%;
+	}
+
+
+
+/* esta sección funciona junto con javascript. cuidado al cambiar propiedades */
+.bg {
+	position: absolute; /*Any position but static should work*/
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	}
+.bg img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	display: block;
+	/* fill and maintain aspect ratio */
+	min-width: 100%; min-height: 100%;
+	max-height: none; max-width: none;
+	}
+
+
+section > div:not(.bg) {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 3rem 1rem;
+	}
+h2 {
+	font-size: 3rem;
+	margin-bottom: 3rem;
+	}
+section p {
+	margin-bottom: 1rem;
+	line-height: 1.2em;
+	}
+
+
+
+
+
+/* 
+#productes > div:not(.bg) > div > div {
+	background: none !important;
+	} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 1000px) {
+
+
+::-webkit-scrollbar             { width: .6rem; height: .6rem;}
+::-webkit-scrollbar-track-piece { background-color: #333;}
+::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 1rem;
+	}
+
+
+#productes > div:not(.bg) > div > div { background-color: rgba(0, 0, 0, .3) }
+
+
+	
+header,
+#productes > div:not(.bg) > div > div > img {
+	pointer-events: none;
+	}
+header > a > span:nth-child(1),
+header.benvingut > a > span:nth-child(2),
+header > a > img,
+header > div a {
+	pointer-events: all;
+	}
+#productes > div:not(.bg) > div > div {
+	cursor: pointer;
+	}
+#productes .product1 > :nth-child(1),
+#productes .product2 > :nth-child(2),
+#productes .product3 > :nth-child(3),
+#productes .product4 > :nth-child(4),
+#productes .product5 > :nth-child(5) {
+	cursor: initial;
+	}
+
+
+
 
 header,
 header > a,
 header > a *,
-header > div *:not(span) {
+header > div *:not(span),
+#productes > div:not(.bg) > div > div,
+#productes > div:not(.bg) > div > div > * {
 	transition-property: all;
 	transition-timing-function: ease-in-out;
 	transition-duration: .5s;
@@ -149,9 +332,6 @@ header > a > span:nth-of-type(2) > span {
 header.benvingut > a > span:nth-of-type(2) > span {
 	transition-delay: .3s;
 	}
-/* header > div *:not(span) {
-	transition-duration: .2s;
-	} */
 header > div > menu > *:not(span),
 header > div > div > div {
 	transition-duration: .2s;
@@ -160,12 +340,11 @@ header:not(.benvingut) > div > div {
 	transition-property: width margin-left;
 	transition-delay: 1.5s;
 	}
-
-#productes .product1 > :nth-child(1) > div,
-#productes .product2 > :nth-child(2) > div,
-#productes .product3 > :nth-child(3) > div,
-#productes .product4 > :nth-child(4) > div,
-#productes .product5 > :nth-child(5) > div {
+#productes .product1 > :nth-child(1) > *,
+#productes .product2 > :nth-child(2) > *,
+#productes .product3 > :nth-child(3) > *,
+#productes .product4 > :nth-child(4) > *,
+#productes .product5 > :nth-child(5) > * {
 	transition-delay: .5s;
 	}
 
@@ -188,16 +367,6 @@ header:not(.benvingut) > div > div {
 
 
 
-
-body * { box-sizing: border-box }
-html,body { width: 100%; height: 100% }
-
-
-
-header            { z-index: 40 }
-section :not(.bg) { z-index: 30 }
-section .bg       { z-index: 20 }
-section           { z-index: 10 }
 
 
 
@@ -343,50 +512,33 @@ header.productes > div > div > div { margin-top: -7.6rem }
 
 
 section {
-	display: block;
-
 	width: 100%;
 	height: 100%;
-	/* min-height: 100%; */
 	overflow: hidden;
 	}
 
-section > div {
-	position: relative;
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section > div:not(.bg) {
-	width: 100%;
-	height: 100%;
-	padding: 3rem 15rem 3rem 3rem;
+	padding: 3rem 15rem 3rem 3rem;/*media querie overwrite*/
 	}
-h2 {
-	font-size: 3rem;
-	margin-bottom: 3rem;
-	}
-section p {
-	margin-bottom: 1rem;
-	line-height: 1.2em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #productes > div:not(.bg) > div {
@@ -408,13 +560,13 @@ section p {
 	overflow: hidden;
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 
 	background-repeat: no-repeat;
 	background-size: 12rem;
 	background-position: calc(100% - 1rem) center;
 	}
-#productes > div:not(.bg) > div > div > div {
+#productes > div:not(.bg) > div > div > * {
 	opacity: 0;
 	}
 #productes .product1 > :nth-child(1),
@@ -425,7 +577,7 @@ section p {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding: 3rem;
+	padding: 2rem;
 
 	background-size: 25rem;
 	background-position: calc(100% + 3rem) calc(100% + 3rem);
@@ -446,30 +598,35 @@ section p {
 	width: 50%;
 	} */
 
-#productes .product1 > :nth-child(1) > div,
-#productes .product2 > :nth-child(2) > div,
-#productes .product3 > :nth-child(3) > div,
-#productes .product4 > :nth-child(4) > div,
-#productes .product5 > :nth-child(5) > div {
+#productes .product1 > :nth-child(1) > *,
+#productes .product2 > :nth-child(2) > *,
+#productes .product3 > :nth-child(3) > *,
+#productes .product4 > :nth-child(4) > *,
+#productes .product5 > :nth-child(5) > * {
 	opacity: 1;
 	}
-#productes > div:not(.bg) > div > div > div:nth-child(1){
-	/* background-color: rgb(161, 86, 86); */
-	width: 20rem;
+
+
+
+#productes h3 {
+	margin-bottom: .5em;
 	}
-#productes > div:not(.bg) > div > div > div:nth-child(2){
-	/* background-color: rgb(95, 185, 97); */
+#productes > div:not(.bg) > div > div > div {
+	display: flex;
+	height: calc(100% - 2rem);
+	flex-direction: row;
+	}
+#productes > div:not(.bg) > div > div > div > div:nth-child(1),
+#productes > div:not(.bg) > div > div > div > div:nth-child(1) img {
+	width: 30rem;
+	}
+#productes > div:not(.bg) > div > div > div > div:nth-child(2) {
 	width: calc(100% - 20rem);
+	
 	padding: 0 2rem;
 	overflow-y: auto;
 	}
 
-#productes h3 {
-	margin-bottom: 1em;
-	}
-#productes h3 i {
-	display: block;
-	}
 
 
 
@@ -488,12 +645,6 @@ section p {
 
 
 
-#productes * {
-	transition-property: all;
-	transition-timing-function: ease-in-out;
-	transition-duration: .5s;
-	/* transition-duration: 2s; */
-	}
 
 
 
@@ -504,4 +655,4 @@ section p {
 
 
 
-iframe {width: 100%;}
+}
